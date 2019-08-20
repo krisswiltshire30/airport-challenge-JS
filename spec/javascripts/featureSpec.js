@@ -1,11 +1,10 @@
 // As an air traffic controller
 // To get passengers to a destination
-// I want to instruct a plane to land at
-//   an airport and confirm that it has landed
+// I want to instruct a plane to land at an airport and confirm that it has landed
 
 "use strict";
 
-describe("feature test:", function() {
+describe("Feature Test:", function() {
   var plane;
   var airport;
 
@@ -14,8 +13,8 @@ describe("feature test:", function() {
     airport = new Airport();
   });
 
-  it("Planes can be instructed to land at an airport", function() {
+  it("planes can be instructed to land at an airport", function() {
     plane.land(airport);
-    expect(airport.planes()).toContatain(plane);
+    expect(airport.planes()).toContain(plane);
   });
 });

@@ -1,21 +1,12 @@
-// describe("Plane", function() {
-//   var plane1;
-//   var plane2;
-//
-//   beforeEach(function() {
-//     plane1 = new Plane();
-//     plane2 = new Plane();
-//   });
-//
-//   it("asd", function() {});
-//
-//   describe("test", function() {
-//     it("can create a new plane", function() {
-//       expect(plane1).toEqual(plane2);
-//     });
-//   });
-//
-//   describe("this is a test",function() {
-//     it("can do a thing", )
-//   });
-// });
+describe("Plane", function() {
+  var plane;
+  var airport;
+  beforeEach(function() {
+    plane = new Plane();
+    airport = jasmine.createSpyObj("airport", ["clearForLanding"]);
+  });
+  it("can land at an airport", function() {
+    plane.land(airport);
+    expect(airport.clearForLanding).toHaveBeenCalledWith(plane);
+  });
+});

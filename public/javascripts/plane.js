@@ -1,3 +1,5 @@
 function Plane() {
-  this.plane = plane;
+  Plane.prototype.land = function(airport) {
+    airport.clearForLanding(this);
+  };
 }
